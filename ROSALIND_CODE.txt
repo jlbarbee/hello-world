@@ -1,0 +1,73 @@
+#strings/lists
+s = "04M3B6ZPolypedatesq6kbMZ2E1Yo4K2troglodytesk5aIcPTpuGey6SM9SJTyeTaKdAXI3sHcuRxKXMieUCo3tx0HBzLyjTkAeMvEmj0TMzuhKsFoGIK3RMZ6eRBncQlKMCYAxDpEPw9G3JjVPly11qOJTLw1tfIyHYNYOE37SoOjGuUnjeCQdBHb."
+a = 7
+b = 17
+c = 32
+d = 42
+
+s1 = s[a:b+1] + " " + s[c:d+1]
+print (s1)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#conditions and loops
+a= 4199
+b= 8472
+c = 0
+
+count = 0
+sum = 0
+
+if (a % 2 == 0):
+    a = a+ 1
+    print ("a is now: ", a)
+a1 = a
+while (a <= b):
+    print ("a: ", a)
+    a = a +2
+    sum = a + sum
+    count = count + 1
+
+
+print (count)
+
+
+print(a1 + (b-1))
+output = (count/2)*(a1 + b-1)
+print (output)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#Working with files
+with open("rosalind_ini5.txt",'r') as fin:
+    count = 0
+    for line in fin:
+        count = count + 1
+        if (count % 2 == 0):
+            print (line)
+    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Dictionaries
+from collections import Counter
+
+s= "When I find myself in times of trouble Mother Mary comes to me Speaking words of wisdom let it be And in my hour of darkness she is standing right in front of me Speaking words of wisdom let it be Let it be let it be let it be let it be Whisper words of wisdom let it be And when the broken hearted people living in the world agree There will be an answer let it be For though they may be parted there is still a chance that they will see There will be an answer let it be Let it be let it be let it be let it be There will be an answer let it be Let it be let it be let it be let it be Whisper words of wisdom let it be Let it be let it be let it be let it be Whisper words of wisdom let it be And when the night is cloudy there is still a light that shines on me Shine until tomorrow let it be I wake up to the sound of music Mother Mary comes to me Speaking words of wisdom let it be Let it be let it be let it be yeah let it be There will be an answer let it be Let it be let it be let it be yeah let it be Whisper words of wisdom let it be"
+
+#s = s.lower()
+s = s.split()
+
+s1 = dict((Counter(s)))
+
+print (s1)
+print("----------------------------------------")
+print("----------------------------------------")
+print("----------------------------------------")
+
+for key, value in dict.items(s1):
+    print (key, value)
+    
+
+
+        
+
